@@ -1,9 +1,13 @@
 using WatchStore.Infrastructure.Data.Context;
+using WatchStore.Infrastructure.Data.Repositories;
+using WatchStore.Web.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<IWatchesRepository,WatchRepository>();
+builder.Services.AddScoped<IWristWatchService,WristWatchService>();
 var dataSqlStartup = new StartUp();
 dataSqlStartup.RegisterDbContext(builder.Services);
 

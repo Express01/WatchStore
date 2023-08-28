@@ -19,6 +19,7 @@ namespace WatchStore.Infrastructure.Data.Context
         {
                 
         }
+      
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             var connectionString = @"Server=DESKTOP-GF2KG8S\SQLEXPRESS;Initial Catalog=WristWatches; Trusted_Connection=True;Encrypt=False";
